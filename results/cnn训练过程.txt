@@ -1,0 +1,95 @@
+E:\soft\Anaconda\envs\dejahu\python.exe E:\project\vegetables_tf2.3\train_cnn.py
+Found 2939 files belonging to 5 classes.
+2024-03-21 14:43:06.026380: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-21 14:43:07.092492: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x17fe65670d0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-03-21 14:43:07.092956: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+Found 731 files belonging to 5 classes.
+['daisy', 'dandelion', 'roses', 'sunflowers', 'tulips']
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+rescaling (Rescaling)        (None, 224, 224, 3)       0
+_________________________________________________________________
+conv2d (Conv2D)              (None, 222, 222, 32)      896
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 111, 111, 32)      0
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 109, 109, 64)      18496
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 54, 54, 64)        0
+_________________________________________________________________
+flatten (Flatten)            (None, 186624)            0
+_________________________________________________________________
+dense (Dense)                (None, 128)               23888000
+_________________________________________________________________
+dense_1 (Dense)              (None, 5)                 645
+=================================================================
+Total params: 23,908,037
+Trainable params: 23,908,037
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/30
+184/184 [==============================] - 105s 571ms/step - loss: 1.4876 - accuracy: 0.3362 - val_loss: 1.5063 - val_accuracy: 0.2722
+Epoch 2/30
+184/184 [==============================] - 71s 387ms/step - loss: 1.2097 - accuracy: 0.4883 - val_loss: 1.1509 - val_accuracy: 0.5075
+Epoch 3/30
+184/184 [==============================] - 71s 384ms/step - loss: 1.0684 - accuracy: 0.5720 - val_loss: 1.1509 - val_accuracy: 0.5376
+Epoch 4/30
+184/184 [==============================] - 71s 384ms/step - loss: 0.9927 - accuracy: 0.6223 - val_loss: 1.0606 - val_accuracy: 0.5650
+Epoch 5/30
+184/184 [==============================] - 72s 392ms/step - loss: 0.9152 - accuracy: 0.6482 - val_loss: 1.0695 - val_accuracy: 0.5855
+Epoch 6/30
+184/184 [==============================] - 70s 379ms/step - loss: 0.8473 - accuracy: 0.6822 - val_loss: 1.0695 - val_accuracy: 0.5978
+Epoch 7/30
+184/184 [==============================] - 70s 383ms/step - loss: 0.7684 - accuracy: 0.7190 - val_loss: 1.2446 - val_accuracy: 0.5677
+Epoch 8/30
+184/184 [==============================] - 71s 388ms/step - loss: 0.6919 - accuracy: 0.7452 - val_loss: 0.9988 - val_accuracy: 0.6224
+Epoch 9/30
+184/184 [==============================] - 72s 391ms/step - loss: 0.6118 - accuracy: 0.7758 - val_loss: 1.0555 - val_accuracy: 0.6005
+Epoch 10/30
+184/184 [==============================] - 72s 391ms/step - loss: 0.5040 - accuracy: 0.8268 - val_loss: 1.0900 - val_accuracy: 0.5937
+Epoch 11/30
+184/184 [==============================] - 71s 388ms/step - loss: 0.4156 - accuracy: 0.8605 - val_loss: 1.1244 - val_accuracy: 0.6101
+Epoch 12/30
+184/184 [==============================] - 72s 391ms/step - loss: 0.3571 - accuracy: 0.8809 - val_loss: 1.5530 - val_accuracy: 0.5458
+Epoch 13/30
+184/184 [==============================] - 71s 389ms/step - loss: 0.2425 - accuracy: 0.9299 - val_loss: 1.6717 - val_accuracy: 0.5800
+Epoch 14/30
+184/184 [==============================] - 71s 388ms/step - loss: 0.1730 - accuracy: 0.9544 - val_loss: 1.3862 - val_accuracy: 0.6129
+Epoch 15/30
+184/184 [==============================] - 71s 386ms/step - loss: 0.1846 - accuracy: 0.9503 - val_loss: 1.3146 - val_accuracy: 0.5923
+Epoch 16/30
+184/184 [==============================] - 73s 397ms/step - loss: 0.1198 - accuracy: 0.9755 - val_loss: 1.3177 - val_accuracy: 0.6156
+Epoch 17/30
+184/184 [==============================] - 75s 408ms/step - loss: 0.0480 - accuracy: 0.9922 - val_loss: 1.4460 - val_accuracy: 0.6074
+Epoch 18/30
+184/184 [==============================] - 76s 415ms/step - loss: 0.0348 - accuracy: 0.9942 - val_loss: 1.5892 - val_accuracy: 0.6129
+Epoch 19/30
+184/184 [==============================] - 74s 402ms/step - loss: 0.0194 - accuracy: 0.9976 - val_loss: 1.6870 - val_accuracy: 0.6101
+Epoch 20/30
+184/184 [==============================] - 75s 408ms/step - loss: 0.0271 - accuracy: 0.9966 - val_loss: 1.7471 - val_accuracy: 0.6183
+Epoch 21/30
+184/184 [==============================] - 77s 417ms/step - loss: 0.1439 - accuracy: 0.9639 - val_loss: 1.2628 - val_accuracy: 0.6142
+Epoch 22/30
+184/184 [==============================] - 76s 412ms/step - loss: 0.0961 - accuracy: 0.9809 - val_loss: 1.4180 - val_accuracy: 0.6170
+Epoch 23/30
+184/184 [==============================] - 82s 445ms/step - loss: 0.0242 - accuracy: 0.9973 - val_loss: 1.5616 - val_accuracy: 0.6238
+Epoch 24/30
+184/184 [==============================] - 79s 431ms/step - loss: 0.0083 - accuracy: 1.0000 - val_loss: 1.6789 - val_accuracy: 0.6238
+Epoch 25/30
+184/184 [==============================] - 75s 406ms/step - loss: 0.0049 - accuracy: 1.0000 - val_loss: 1.7617 - val_accuracy: 0.6183
+Epoch 26/30
+184/184 [==============================] - 79s 428ms/step - loss: 0.0039 - accuracy: 1.0000 - val_loss: 1.8152 - val_accuracy: 0.6170
+Epoch 27/30
+184/184 [==============================] - 77s 417ms/step - loss: 0.0031 - accuracy: 1.0000 - val_loss: 1.8663 - val_accuracy: 0.6156
+Epoch 28/30
+184/184 [==============================] - 76s 413ms/step - loss: 0.0026 - accuracy: 1.0000 - val_loss: 1.9052 - val_accuracy: 0.6170
+Epoch 29/30
+184/184 [==============================] - 79s 431ms/step - loss: 0.0023 - accuracy: 1.0000 - val_loss: 1.9496 - val_accuracy: 0.6142
+Epoch 30/30
+184/184 [==============================] - 73s 398ms/step - loss: 0.0041 - accuracy: 0.9993 - val_loss: 1.9000 - val_accuracy: 0.6211
+该循环程序运行时间： 2295.9050998687744 s
+
+Process finished with exit code 0
